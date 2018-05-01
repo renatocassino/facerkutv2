@@ -5,8 +5,9 @@ defmodule Facerkutv2.Community do
     field :title, :string
     field :description, :string
     field :slug, :string
+    belongs_to :user, Facerkutv2.User
 
-    # many_to_many :tags, Facerkutv2.User, join_through: "community_members"
+    many_to_many :tags, Facerkutv2.User, join_through: "community_members"
     timestamps()
   end
 

@@ -16,7 +16,12 @@ defmodule Facerkutv2.CommunityView do
       description: community.description,
       slug: community.slug,
       inserted_at: community.inserted_at,
-      updated_at: community.updated_at
+      updated_at: community.updated_at,
+      user: %{
+        id: community.user.id,
+        name: community.user.name,
+        photo_url: community.user.photo_url
+      }
     }
   end
 end
