@@ -32,6 +32,7 @@ defmodule Facerkutv2.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2.5"},
      {:phoenix_pubsub, "~> 1.0"},
+     {:json_web_token, "~> 0.2.5"},
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},

@@ -1,14 +1,13 @@
-defmodule Facerkutv2.Community do
+defmodule Facerkutv2.Topic do
   use Facerkutv2.Web, :model
 
-  schema "communities" do
+  schema "topics" do
     field :title, :string
     field :description, :string
     field :slug, :string
     belongs_to :user, Facerkutv2.User
-    has_many :topics, Facerkutv2.Topic
+    belongs_to :community, Facerkutv2.Community
 
-    many_to_many :tags, Facerkutv2.User, join_through: "community_members"
     timestamps()
   end
 
