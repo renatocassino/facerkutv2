@@ -1,6 +1,9 @@
 defmodule Facerkutv2.Community do
   use Facerkutv2.Web, :model
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+
   schema "communities" do
     field :title, :string
     field :description, :string

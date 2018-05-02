@@ -3,8 +3,8 @@ defmodule Facerkutv2.Repo.Migrations.CommunityMembers do
 
   def change do
     create table(:community_members, primary_key: false) do
-      add :community_id, references(:communities)
-      add :user_id, references(:users)
+      add :community_id, references(:communities, type: :uuid)
+      add :user_id, references(:users, type: :uuid)
     end
   end
 end

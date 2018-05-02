@@ -1,6 +1,9 @@
 defmodule Facerkutv2.Topic do
   use Facerkutv2.Web, :model
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+
   schema "topics" do
     field :title, :string
     field :description, :string
