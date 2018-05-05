@@ -24,6 +24,7 @@ community = Repo.insert!(%Community{
   title: "Estou Horrorizado e Curioso",
   slug: "estou-horrorizado-e-curioso",
   description: "Muito horrorizado mesmo",
+  image_url: "https://s3.amazonaws.com/facerkut/images/5a454d883d2ca80004033b50/original.jpg",
   user: user})
 
 Repo.insert!(%Topic{

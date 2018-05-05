@@ -8,6 +8,7 @@ defmodule Facerkutv2.Community do
     field :title, :string
     field :description, :string
     field :slug, :string
+    field :image_url, :string
     belongs_to :user, Facerkutv2.User
     has_many :topics, Facerkutv2.Topic
 

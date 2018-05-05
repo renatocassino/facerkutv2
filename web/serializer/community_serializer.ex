@@ -1,5 +1,5 @@
 defmodule Facerkutv2.CommunitySerializer do
-  alias Facerkutv2.{UserSerializer}
+  alias Facerkutv2.{UserSerializer, Image}
 
   def serializer(community) do
     %{
@@ -8,7 +8,11 @@ defmodule Facerkutv2.CommunitySerializer do
       slug: community.slug,
       description: community.description,
       created_at: community.inserted_at,
-      updated_at: community.updated_at
+      updated_at: community.updated_at,
+      images: Image.generate_list([
+        [300, 300],
+        [500, 500]
+      ], community.image_url)
     }
   end
 
@@ -19,5 +23,4 @@ defmodule Facerkutv2.CommunitySerializer do
       user: user
     })
   end
-
 end

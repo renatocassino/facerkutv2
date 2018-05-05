@@ -8,6 +8,7 @@ defmodule Facerkutv2.Repo.Migrations.Community do
       add :description, :text
       add :slug, :string, size: 150
       add :user_id, references(:users, type: :uuid)
+      add :image_url, :string, size: 500
       timestamps()
     end
   end

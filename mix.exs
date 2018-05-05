@@ -36,6 +36,7 @@ defmodule Facerkutv2.Mixfile do
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
+     {:thumbor_client, ">= 0.4.0"},
      {:cowboy, "~> 1.0"}]
   end
 
