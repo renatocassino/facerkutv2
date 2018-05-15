@@ -24,8 +24,5 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :facerkutv2, Facerkutv2.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "psqlpass",
-  database: "facerkutv2_dev",
-  hostname: "localhost",
-  pool_size: 10
+  url: "postgres://postgres:psqlpass@localhost/facerkutv2_dev",
+  pool_size: 2
