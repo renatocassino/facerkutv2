@@ -19,7 +19,7 @@ defmodule Facerkutv2.Mixfile do
   def application do
     [mod: {Facerkutv2, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :oauth2]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,8 @@ defmodule Facerkutv2.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:thumbor_client, ">= 0.4.0"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:oauth2, "~> 0.9"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
