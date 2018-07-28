@@ -8,4 +8,6 @@ ADD mix.lock /app/mix.lock
 RUN mix local.hex --force
 
 RUN mix deps.get
+RUN mix local.hex --force
+
 ADD . /app
