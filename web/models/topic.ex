@@ -11,7 +11,7 @@ defmodule Facerkutv2.Topic do
     belongs_to :user, Facerkutv2.User
     belongs_to :community, Facerkutv2.Community
 
-    timestamps()
+    timestamps(inserted_at: :created_at)
   end
 
   @doc """

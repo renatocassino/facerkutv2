@@ -1,8 +1,8 @@
 defmodule Facerkutv2.CommunityController do
   use Facerkutv2.Web, :controller
-  
+
   alias Facerkutv2.{Repo, Community, User}
-  
+
   def index(conn, _params) do
     communities = Repo.all(Community) |> Repo.preload(:user)
     render(conn, "index.json", communities: communities)

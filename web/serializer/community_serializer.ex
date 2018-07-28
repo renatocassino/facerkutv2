@@ -7,12 +7,8 @@ defmodule Facerkutv2.CommunitySerializer do
       title: community.title,
       slug: community.slug,
       description: community.description,
-      created_at: community.inserted_at,
+      created_at: community.created_at,
       updated_at: community.updated_at,
-      images: Image.generate_list([
-        [300, 300],
-        [500, 500]
-      ], community.image_url)
     }
   end
 

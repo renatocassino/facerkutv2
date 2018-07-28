@@ -1,19 +1,17 @@
 defmodule Facerkutv2.Community do
   use Facerkutv2.Web, :model
 
-  @primary_key {:id, :binary_id, autogenerate: true}
-  @foreign_key_type :binary_id
+  @primary_key {:id, :id, autogenerate: true}
 
   schema "communities" do
     field :title, :string
     field :description, :string
     field :slug, :string
-    field :image_url, :string
     belongs_to :user, Facerkutv2.User
     has_many :topics, Facerkutv2.Topic
 
     many_to_many :tags, Facerkutv2.User, join_through: "community_members"
-    timestamps()
+    timestamps(inserted_at: :created_at)
   end
 
   @doc """
