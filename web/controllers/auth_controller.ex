@@ -13,10 +13,6 @@ defmodule Facerkutv2.AuthController do
 
     #user = OAuth2.Client.get!(client, "/api/3.0/users/details.json").body
 
-    require IEx
-    IEx.pry
-
-
     text conn, "OK"
   end
 end

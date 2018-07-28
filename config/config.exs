@@ -11,7 +11,6 @@ config :facerkutv2,
 
 # Configures the endpoint
 config :facerkutv2, Facerkutv2.Endpoint,
-  url: [host: "localhost"],
   secret_key_base: "5PxmzePAY6aQmaIf7KAXrcoygXm0b9q462VdmCR2UpKz/g4BIyUydZbZAFkaUQcF",
   render_errors: [view: Facerkutv2.ErrorView, accepts: ~w(json)],
   pubsub: [name: Facerkutv2.PubSub,

@@ -12,7 +12,7 @@ defmodule Facerkutv2.Router do
   get "/auth/disqus", Facerkutv2.AuthController, :auth
   get "/auth/disqus/callback", Facerkutv2.AuthController, :callback
 
-  scope "/api", Facerkutv2 do
+  scope "/api/v2", Facerkutv2 do
     get "/login", UserController, :login
     get "/communities", CommunityController, :index
     get "/communities/:slug", CommunityController, :show
