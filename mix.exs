@@ -19,7 +19,7 @@ defmodule Facerkutv2.Mixfile do
   def application do
     [mod: {Facerkutv2, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :oauth2]]
+                    :phoenix_ecto, :postgrex, :oauth2, :guardian]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,6 +36,7 @@ defmodule Facerkutv2.Mixfile do
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
+     {:guardian, "~> 0.14"},
      {:thumbor_client, ">= 0.4.0"},
      {:cowboy, "~> 1.0"},
      {:oauth2, "~> 0.9"}]

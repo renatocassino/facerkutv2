@@ -28,10 +28,10 @@ defmodule Facerkutv2.CommunityController do
   end
 
   def im_in(conn, params) do
-    # Get members c = Repo.get(Community, 1) |> Repo.preload(:members)
-    v = Ecto.Adapters.SQL.query(Repo, "select count(*) as count from communities_users where user_id = $1 and community_id = $2", [1, 1])
-    {:ok, result}  = v
-    [[count]] = result.rows
+    [community_id] = Repo.all(from c in Community, select: c.id, limit: 1, where: c.slug == "estou")
+
+    {:ok, result} = Ecto.Adapters.SQL.query(Repo, "select count(*) as count from communities_users where user_id = $1 and community_id = $2", [1, community_id])
+    [[ count ]] = result.rows
     render(conn, "im_in.json", count: count)
   end
 

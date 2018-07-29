@@ -11,7 +11,7 @@ defmodule Facerkutv2.CommunityView do
   end
 
   def render("im_in.json", %{count: count}) do
-    
+    %{ im_in: count > 0 }
   end
 
   def render("community.json", %{community: community}) do

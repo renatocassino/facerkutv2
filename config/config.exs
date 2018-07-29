@@ -26,6 +26,14 @@ config :oauth2,
     "application/vnd.api+json" => Poison
   }
 
+config :guardian, Guardian,
+  allowed_algos: ["HS556"], # optional
+  verify_module: Guardian.JWT,  # optional
+  issuer: "Facerkutv2",
+  verify_issuer: false, # optional
+  secret_key: "790d45eaf7de01afc1d6d8458051ffb832ddc28921d49b4e9e954837db5bd8b196fc26580323644e5a2381be5471a5fbc5572c8f18194e457c5f8b2c92c039d3",
+  serializer: Facerkutv2.GuardianSerializer
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
