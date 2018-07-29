@@ -16,6 +16,7 @@ defmodule Facerkutv2.Router do
     get "/login", UserController, :login
     get "/communities", CommunityController, :index
     get "/communities/:slug", CommunityController, :show
+    post "/communities/:slug/im-in", CommunityController, :im_in
     get "/communities/:slug/topics/:topic_slug", TopicController, :show
   end
 end

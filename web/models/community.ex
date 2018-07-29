@@ -10,7 +10,8 @@ defmodule Facerkutv2.Community do
     belongs_to :user, Facerkutv2.User
     has_many :topics, Facerkutv2.Topic
 
-    many_to_many :tags, Facerkutv2.User, join_through: "community_members"
+    many_to_many :members, Facerkutv2.User, join_through: "communities_users"
+
     timestamps(inserted_at: :created_at)
   end
 

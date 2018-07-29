@@ -1,14 +1,20 @@
 # Facerkutv2
 
-To start your Phoenix app:
+## Endpoints
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Start Phoenix endpoint with `mix phoenix.server`
+```
+/api/v2/communities -> List all communities
+/api/v2/communities/:slug/im-in -> Check if user are a member of a community
+```
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Tables
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+```
+communities
+users
+topics
+communities_users -> Members
+```
 
 ## Commands
 
@@ -16,6 +22,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 make build
 make start
 ```
+
+To run queries in terminal, you must run first
+
+`import Ecto.Query`
 
 ## Learn more
 
