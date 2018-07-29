@@ -4,7 +4,22 @@ defmodule Facerkutv2.CommunityController do
   alias Facerkutv2.{Repo, Community, User}
 
   def index(conn, _params) do
-    communities = Repo.all(Community) |> Repo.preload(:user)
+      query = (from c in Community, join: u in User, where: c.user_id == u.id, select: %{
+          id: c.id,
+          title: c.title,
+          slug: c.slug,
+          description: c.description,
+          created_at: c.created_at,
+          updated_at: c.updated_at,
+          user: %{
+            id: u.id,
+            name: u.name,
+            photo_url: u.photo_url,
+            email: u.email
+          }
+    })
+
+    communities = Repo.all(query)
     render(conn, "index.json", communities: communities)
   end
 
